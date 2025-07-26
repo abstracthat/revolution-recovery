@@ -292,6 +292,10 @@ body {
   height: 100%;
 }
 
+iframe {
+  width: 100%;
+}
+
 .container {
   margin: 0 auto;
   height: 100%;
@@ -303,6 +307,10 @@ body {
 
 .inner-container {
   padding: 2rem;
+  margin: 0 auto;
+}
+
+.center {
   margin: 0 auto;
 }
 
@@ -326,6 +334,12 @@ img {
 .heading {
   font-family: 'rockwell';
   font-size: 3rem;
+  line-height: 4rem;
+}
+
+.sub-heading {
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .grid {
@@ -346,9 +360,10 @@ img {
   }
 }
 
-.image-card {
+.card {
   padding: 1rem;
   background: white;
+  border-radius: 0.25rem;
   display: block;
   width: 100%;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
