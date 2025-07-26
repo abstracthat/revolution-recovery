@@ -1,0 +1,367 @@
+@font-face {
+  font-family: 'source-sans-pro';
+  src:
+    url('fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+    url('fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+    url('fonts/sourcesanspro-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source-sans-pro';
+  src:
+    url('fonts/sourcesanspro-italic-webfont.woff2') format('woff2'),
+    url('fonts/sourcesanspro-italic-webfont.woff') format('woff'),
+    url('fonts/sourcesanspro-italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'source-sans-pro';
+  src:
+    url('fonts/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+    url('fonts/sourcesanspro-semibold-webfont.woff') format('woff'),
+    url('fonts/sourcesanspro-semibold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rockwell';
+  src: url('fonts/rockwell.woff2') format('woff2'),
+       url('fonts/rockwell.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p, blockquote,
+a,
+button,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+pre,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+figure,
+figcaption,
+input,
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: none;
+}
+
+q:before {
+  content: '\201C';
+}
+
+q:after {
+  content: '\201D';
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  font-family: 'source-sans-pro', helvetica, arial, sans-serif;
+}
+
+body::after {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+body::selection {
+  background-color: rgba(204, 48, 87, 0.4);
+}
+
+body::-moz-selection {
+  background-color: #d85777;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0 0 0.9375rem;
+  line-height: 1.375rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+
+main {
+  display: block;
+}
+
+dl, dt, dd {
+  margin: 0;
+  line-height: 1.375rem;
+}
+
+abbr {
+  font-variant: none;
+  text-decoration: none;
+}
+
+button,
+input[type="reset"] {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #cc3057;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  p {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #FFFAEB;
+}
+
+.inner-container {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1;
+  width: 1;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.heading {
+  font-family: 'rockwell';
+  font-size: 3rem;
+}
+
+.grid {
+  display: inline-grid;
+  grid-gap: 1rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 30em) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(min-content, 400px));
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(min-content, 400px));
+  }
+}
+
+.image-card {
+  padding: 1rem;
+  background: white;
+  display: block;
+  width: 100%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}
+
+.mb2 {
+  margin-bottom: 2rem;
+}
