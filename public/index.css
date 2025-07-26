@@ -212,7 +212,8 @@ h1 {
 
 p {
   margin: 0 0 0.9375rem;
-  line-height: 1.375rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
 }
