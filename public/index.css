@@ -308,14 +308,26 @@ iframe {
 }
 
 header {
-  padding: 2rem;
+  padding: 2rem 1rem;
   margin-bottom: -4rem;
   background: #FFFAEB;
 }
 
 .inner-container {
-  padding: 2rem;
+  padding: 2rem 1rem;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 30em) {
+  .inner-container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  header {
+    padding: 2rem;
+  }
 }
 
 .center {
@@ -379,6 +391,7 @@ dialog img {
 
 .heading {
   font-family: 'rockwell';
+  font-weight: bold;
   font-size: 3rem;
   line-height: 3.5rem;
 }
