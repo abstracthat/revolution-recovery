@@ -317,9 +317,13 @@ iframe {
 
 .container {
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1rem;
   max-width: 1000px;
   background: white;
+
+  @media screen and (min-width: 30em) {
+    padding: 2rem 1.5rem;
+  }
 
   @media screen and (min-width: 40em) {
     padding: 2rem;
@@ -333,10 +337,16 @@ iframe {
 }
 
 header {
-  padding: 2rem 1.5rem;
-  margin: -2rem -1.5rem 2rem;
+  padding: 2rem 1rem;
+  margin: -2rem -1rem 2rem;
   background: #2a3c33;
 
+  @media screen and (min-width: 30em) {
+    padding: 2rem 1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+  
   @media screen and (min-width: 40em) {
     padding: 2rem;
     margin-left: -2rem;
@@ -357,7 +367,7 @@ header {
 
 .header-image {
   position: relative;
-  margin: -2rem -1.5rem 0;
+  margin: -2rem -1rem 0;
   height: 332px;
   overflow: hidden;
   background-image: url("/images/full/home/IMG_5664.jpg");
@@ -366,6 +376,10 @@ header {
   background-position: 50% 40%;
   background-repeat: no-repeat;
   margin-bottom: 2rem;
+
+  @media screen and (min-width: 30em) {
+    margin: -2rem -1.5rem 0;
+  }
 
   @media screen and (min-width: 40em) {
     margin: -2rem -2rem 0;
