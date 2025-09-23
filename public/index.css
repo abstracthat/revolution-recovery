@@ -210,12 +210,18 @@ h1 {
   padding: 0;
 }
 
-p {
+p, li {
   margin: 0 0 0.9375rem;
   font-size: 1.25rem;
+  font-weight: 400;
   line-height: 1.75rem;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
+}
+
+ul > li {
+  list-style-type: disc;
+  margin-left: 1rem;
 }
 
 strong, b {
@@ -224,6 +230,15 @@ strong, b {
 
 i {
   font-style: italic;
+}
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-bottom: 1rem
+}
+
+footer p {
+  margin-bottom: 0;
 }
 
 main {
@@ -291,6 +306,7 @@ only screen and (min-resolution: 2dppx) {
 
 body {
   height: 100%;
+  background: #fcf0d6;
 }
 
 iframe {
@@ -301,39 +317,111 @@ iframe {
 
 .container {
   margin: 0 auto;
-  padding: 2rem 1rem;
-  height: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: #FFFAEB;
+  padding: 2rem 1.5rem;
+  max-width: 1000px;
+  background: white;
+
+  @media screen and (min-width: 40em) {
+    padding: 2rem;
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding: 2rem 3rem;
+    border-left: 4px solid #fae8c1;
+    border-right: 4px solid #fae8c1;
+  }
 }
 
 header {
-  padding: 2rem 1rem;
-  margin-bottom: -4rem;
-  background: #FFFAEB;
-}
+  padding: 2rem 1.5rem;
+  margin: -2rem -1.5rem 2rem;
+  background: #2a3c33;
 
-.inner-container {
-  padding: 2rem 1rem;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 30em) {
-  .inner-container {
+  @media screen and (min-width: 40em) {
     padding: 2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding: 3rem 2rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
   }
 }
 
-@media screen and (min-width: 30em) {
-  header {
-    padding: 2rem;
+.logo {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5))
+}
+
+.header-image {
+  position: relative;
+  margin: -2rem -1.5rem 0;
+  height: 332px;
+  overflow: hidden;
+  background-image: url("/images/full/home/IMG_5664.jpg");
+  background-color: black;
+  background-size: cover;
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 40em) {
+    margin: -2rem -2rem 0;
   }
+
+  @media screen and (min-width: 1000px) {
+    margin: -2rem -2rem 0;
+  }
+}
+
+.header-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.20);
+}
+
+.image-description {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 34em) {
+    gap: 2rem;
+    grid-template-columns: 200px minmax(auto, 500px);
+  }
+}
+
+.image-description img {
+  border-radius: 5px;
+}
+
+.big-image-description {
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 57em) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr minmax(300px, 500px);
+  }
+}
+
+.big-image-description img {
+  border-radius: 5px;
 }
 
 .center {
   margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 
 .center-logo {
@@ -360,43 +448,6 @@ button {
   padding: 0.5rem;
 }
 
-::backdrop {
-  background: rgba(0, 0, 0, 0.75);
-}
-
-dialog button {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: transparent;
-  border: none;
-  padding: 0.5rem;
-}
-
-dialog {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  border: none;
-  padding: 0;
-  justify-content: center;
-  align-items: center; /* Vertically centers the image */
-}
-
-dialog[open] {
-  display: flex;
-}
-
-dialog img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
-  margin: 0;
-}
 .bold {
   font-weight: bold;
 }
@@ -404,55 +455,80 @@ dialog img {
 .heading {
   font-family: 'rockwell';
   font-weight: bold;
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  color: #fae8c1;
+  margin-top: 2rem;
+
+  @media screen and (min-width: 30em) {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
 }
 
 .sub-heading {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-family: 'rockwell';
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  margin-bottom: 1rem;
+}
+
+.underline-heading {
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.heading-3 {
+  font-size: 1.5rem; 
+  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .limit-width {
   max-width: 40rem;
 }
 
-.card {
-  padding: 1rem;
-  background: white;
-  border-radius: 0.25rem;
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
-}
-
 .grid {
-  display: inline-grid;
+  display: grid;
   grid-gap: 1rem;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 36em) {
+.grid img {
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 24em) {
   .grid {
     grid-template-columns: repeat(2, minmax(min-content, 400px));
   }
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 34em) {
   .grid {
     grid-template-columns: repeat(3, minmax(min-content, 400px));
   }
 }
 
-@media screen and (min-width: 75em) {
-  .grid {
-    grid-template-columns: repeat(4, minmax(min-content, 400px));
+.text-center {
+  text-align: center;
+}
+
+.small-mb1 {
+  @media screen and (max-width: 46em) {
+    margin-bottom: 1rem !important;
   }
 }
 
-.text-center {
-  text-align: center;
+.small-mb2 {
+  @media screen and (max-width: 46em) {
+    margin-bottom: 2rem !important;
+  }
 }
 
 .mb1 {
@@ -465,4 +541,8 @@ dialog img {
 
 .mb3 {
   margin-bottom: 3rem;
+}
+
+.mb4 {
+  margin-bottom: 4rem;
 }
