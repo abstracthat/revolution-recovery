@@ -354,7 +354,7 @@ header {
   }
 
   @media screen and (min-width: 1000px) {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 2rem;
     margin-top: -3rem;
     margin-left: -3rem;
     margin-right: -3rem;
