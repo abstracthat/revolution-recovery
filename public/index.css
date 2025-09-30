@@ -576,7 +576,8 @@ button {
   }
 
   @media screen and (min-width: 56em) {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -598,8 +599,8 @@ button {
 }
 
 .large-mb0 {
-  @media screen and (max-width: 56em) {
-    margin-bottom: 0;
+  @media screen and (min-width: 56em) {
+    margin-bottom: 0 !important;
   }
 }
 
