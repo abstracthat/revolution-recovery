@@ -490,6 +490,7 @@ button {
   line-height: 2.125rem;
   color: #fae8c1;
   margin-top: 2rem;
+  text-wrap: balance;
 
   @media screen and (min-width: 30em) {
     font-size: 2.5rem;
